@@ -6,7 +6,7 @@ const MainRight = () => {
         <div className='main--right'>
 
             <div className='right--content'>
-                sss
+
             </div>
 
         </div>

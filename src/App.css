@@ -15,3 +15,25 @@
     position: absolute;
     right:0;
 }
+
+@media screen and (max-width: 1200px) {
+    .main {
+        padding:0 2%;
+    }
+}
+
+@media (max-width: 800px) {
+    .main {
+        flex-direction: column;
+        height: 100%;
+    }
+    .right--whiter {
+        display: none;
+    }
+}
+
+@media (max-height: 850px) {
+    .main {
+        height:100%;
+    }
+}
