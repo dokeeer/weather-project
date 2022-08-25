@@ -1,4 +1,18 @@
 .main--right{
-    background: gray;
-    width: 30%;
+    width: 35%;
+}
+
+@media (max-width: 800px) {
+    .main--right {
+        min-height: 500px;
+        background: #1A2B2C;
+        width:100%;
+        margin-top:15px;
+    }
+}
+
+@media (max-height: 850px) {
+    .main--right {
+        height:100vh;
+    }
 }

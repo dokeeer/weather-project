@@ -1,4 +1,39 @@
 .main {
     display: flex;
     height: 100vh;
+    flex-direction: row;
+    background: linear-gradient(243.18deg, #5CEBD1 0%, #1A2B2C 100%);
+    padding: 0 10%;
+    position: relative;
+}
+
+.right--whiter {
+    background: #D6D6D6;
+    opacity: 0.1;
+    width: 40%;
+    height:100vh;
+    position: absolute;
+    right:0;
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        padding:0 2%;
+    }
+}
+
+@media (max-width: 800px) {
+    .main {
+        flex-direction: column;
+        height: 100%;
+    }
+    .right--whiter {
+        display: none;
+    }
+}
+
+@media (max-height: 850px) {
+    .main {
+        height:100%;
+    }
 }

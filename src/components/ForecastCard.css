@@ -1,0 +1,54 @@
+.forecast {
+    margin-top: 70px;
+    width:140px;
+    height:200px;
+    background: rgba(214, 214, 214, 0.4);
+    box-shadow: 3px -2px 14px -1px rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 6%;
+}
+
+.forecast--picture {
+    height:70px;
+}
+
+.forecast--temp {
+    font-family: 'Roboto';
+    font-size:25px;
+    margin-top:20px;
+}
+
+.forecast--day {
+    font-family: 'Roboto';
+    margin-top: 20px;
+    font-size:40px;
+}
+
+@media (max-width: 1200px) {
+    .forecast {
+        width:88%;
+        height: 80px;
+        margin: 0 0 20px 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .forecast--temp {
+        margin: 0;
+    }
+    .forecast--picture {
+        margin: 0;
+    }
+    .forecast--day {
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .forecast {
+        width: 100%;
+    }
+}
