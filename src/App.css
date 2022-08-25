@@ -1,4 +1,17 @@
 .main {
     display: flex;
     height: 100vh;
+    flex-direction: row;
+    background: linear-gradient(243.18deg, #5CEBD1 0%, #1A2B2C 100%);
+    padding: 0 10%;
+    position: relative;
+}
+
+.right--whiter {
+    background: #D6D6D6;
+    opacity: 0.1;
+    width: 40%;
+    height:100vh;
+    position: absolute;
+    right:0;
 }

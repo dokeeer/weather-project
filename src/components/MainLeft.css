@@ -1,5 +1,68 @@
 .main--left {
-    width: 70%;
+    width: 65%;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
 
-    background:black;
+.degrees {
+    font-weight: 100;
+    font-size: 164px;
+    letter-spacing: 1.1rem;
+    margin:20px 0;
+}
+
+.date {
+    margin: 40px 0 40px 0;
+    font-size: 40px;
+}
+
+.day {
+    font-size: 36px;
+    margin-right: 40px;
+    padding-top:5px;
+}
+
+.time {
+    font-size: 50px;
+}
+
+.daytime {
+    margin-bottom:40px;
+    display: flex;
+}
+
+.additional {
+    display: flex;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
+}
+
+.additional div {
+    padding-right: 20px;
+}
+
+.additional--block {
+    position: relative;
+}
+
+.additional--img {
+    position: absolute;
+
+    height:25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.additional span {
+    margin-left:40px;
+}
+
+.weatherpicture--picture {
+    margin-top:50px;
+}
+
+.break {
+    font-size: 30px;
 }
