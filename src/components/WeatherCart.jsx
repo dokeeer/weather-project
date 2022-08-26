@@ -9,11 +9,12 @@ const WeatherCart = (props) => {
         <div className='WeatherCart'>
             <div className='container'>
                 <div className='WeatherCart_content'>
+                    <div className='WeatherCart_time'>
+                        {props.hours}
+                    </div>
                     <WeatherPicture class = 'weathercart--picture'/>
                     <div className='adaptive--column'>
-                        <div className='WeatherCart_time left'>
-                            {props.hours}
-                        </div>
+
                         <div className='wind-speed left'>
 
                             {props.temp} C

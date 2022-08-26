@@ -74,6 +74,7 @@
 
 .weather--main {
     margin-top:20px;
+    display: flex;
 }
 
 .break {
@@ -82,6 +83,10 @@
 
 .cardsholder {
     display: flex;
+}
+
+.main--picture {
+    margin-left: 100px;
 }
 
 @media (max-width: 1025px) {
