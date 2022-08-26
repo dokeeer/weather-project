@@ -1,14 +1,15 @@
 .WeatherCart{
-    height: auto;
-    margin: 10px 0px;
+    height: 70px;
+    margin: 10px 20px 0px 20px;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 3px -2px 14px -1px rgba(255, 255, 255, 0.6);
     border-radius: 20px;
-
+    display: flex;
+    align-items: center;
 
 }
 .container{
-
+    width: 100%;
 }
 
 .WeatherCart_content {
@@ -16,26 +17,44 @@
     font-family: Roboto;
     font-weight: 300;
     font-size: 25px;
-    padding: 10px 0px 10px 0px;
-    justify-content: space-between;
-}
-.WeatherCart_time{
-    margin: 10px;
-}
-span{
-    font-weight: 400;
-    font-size: 20px;
+    align-items: center;
+    width: 100%;
+    position: relative;
 }
 
-.first_rows{
+.weathercart--picture {
+    height: 70px;
+    margin-right:0;
+
+}
+
+.adaptive--row {
     display: flex;
-    flex-wrap: wrap;
+}
 
+.adaptive--column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5% 0px 0px;
 }
-.rows_row{
-    padding: 5px 0px;
-    margin: 0px 5px;
+
+.right {
+    position: absolute;
+    right: 20px;
 }
-.row_body{
-    font-size: 18px;
+
+.weathercart--wind {
+    padding-left:5px;
+}
+
+@media (max-width: 1025px) {
+    .adaptive--column {
+        font-size:20px
+    }
+    .right {
+        right: 0;
+    }
+    .weathercart--picture {
+        width: 100px;
+    }
 }

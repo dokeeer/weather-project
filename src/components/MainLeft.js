@@ -6,24 +6,12 @@ import rain from '../images/rain.svg'
 import hum from '../images/hum.svg'
 import ForecastCard from "./ForecastCard";
 
-const getCards = () => {
-    const array = [
-        {
-            degrees: 25,
-            day: 'Tue'
-        },
-        {
-            degrees: 25,
-            day: 'Tue'
-        },
-        {
-            degrees: 25,
-            day: 'Tue'
-        }
-    ]
+const getCards = (array, click) => {
     return array.map(obj =>
         <ForecastCard
-            data={obj}/>
+            data={obj}
+            click={click}
+            />
     )
 }
 
@@ -64,7 +52,7 @@ const MainLeft = (props) => {
                 </div>
             </div>
             <div className='cardsholder'>
-            {getCards()}
+            {getCards(props.data, props.changeForecast)}
             </div>
         </div>
     )

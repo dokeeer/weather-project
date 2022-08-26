@@ -1,6 +1,6 @@
 .forecast {
     margin-top: 70px;
-    width:140px;
+    width:16%;
     height:200px;
     background: rgba(214, 214, 214, 0.4);
     box-shadow: 3px -2px 14px -1px rgba(255, 255, 255, 0.6);
@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 6%;
+    margin-right: 4%;
 }
 
 .forecast--picture {
@@ -24,12 +24,12 @@
 .forecast--day {
     font-family: 'Roboto';
     margin-top: 20px;
-    font-size:40px;
+    font-size:30px;
 }
 
 @media (max-width: 1200px) {
     .forecast {
-        width:88%;
+        width:94%;
         height: 80px;
         margin: 0 0 20px 0;
         flex-direction: row;

@@ -1,41 +1,32 @@
 import React from 'react';
 import './WeatherCart.css'
+import WeatherPicture from './WeatherPicture.js'
+import wind from '../images/wind.svg'
+import rain from '../images/rain.svg'
 
-const WeatherCart = () => {
+const WeatherCart = (props) => {
     return (
         <div className='WeatherCart'>
             <div className='container'>
                 <div className='WeatherCart_content'>
-                    <div className='WeatherCart_time'>
-                        10:40
-                        <span>AM</span>
-                    </div>
-                    <div className='first_rows'>
-                        <div className='rows_row'>
-                            <div className='row_body'>
-                                Humidity 38%
-                            </div>
+                    <WeatherPicture class = 'weathercart--picture'/>
+                    <div className='adaptive--column'>
+                        <div className='WeatherCart_time left'>
+                            10:40 AM
                         </div>
-                        <div className='rows_row'>
-                            <div className='row_body'>
-                                Chance of rain 2%
-                            </div>
+                        <div className='wind-speed left'>
+                            <img src={wind} className='weathercart--wind'/>
+                            1.64 km/h
                         </div>
                     </div>
-                    <div className='first_rows'>
-                        <div className='rows_row'>
-                            <div className='row_body'>
-                                Air Quailty
-                            </div>
+                    <div className='adaptive--column right'>
+                        <div className='WeatherCart_weather'>
+                            25 C
                         </div>
-                        <div className='rows_row'>
-                            <div className='row_body'>
-                                Wind speed 3.8 km/h
-                            </div>
+                        <div className='rain-prob'>
+                            <img src={rain} className='weathercart--rain'/>
+                            25%
                         </div>
-                    </div>
-                    <div className='WeatherCart_weather'>
-                        25 C
                     </div>
                 </div>
             </div>
@@ -44,22 +35,3 @@ const WeatherCart = () => {
 };
 
 export default WeatherCart;
-// <div className='columns_row'>
-
-//     <div className='columns_column'>
-//         <div className='column_body'>
-//             Chance of rain 2%
-//         </div>
-//     </div>
-//     <div className='columns_column'>
-//         <div className='column_body'>
-//             Air Quailty
-//
-//         </div>
-//     </div>
-//     <div className='columns_column'>
-//         <div className='column_body'>
-//             Wind speed 3.8 km/h
-//         </div>
-//     </div>
-// </div>
