@@ -11,9 +11,16 @@ const getList = (raw) => {
 }
 
 export default async function detData(setter,searchValue) {
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=6e93b3d15872f914c6929fed9ea71e9a`
-    const response = await fetch(url)
-    const data = await response.json()
-    setter(getList(data))
-    console.log('fetched')
+
+    try {
+        const url = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=6e93b3d15872f914c6929fed9ea71e9a`
+        const response = await fetch(url)
+        const data = await response.json()
+        setter(getList(data))
+    } catch (error) {
+
+        console.error("The Promise is rejected!", error);
+
+    } finally {
+    }
 }
