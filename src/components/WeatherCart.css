@@ -1,0 +1,41 @@
+.WeatherCart{
+    height: auto;
+    margin: 10px 0px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 3px -2px 14px -1px rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+
+
+}
+.container{
+
+}
+
+.WeatherCart_content {
+    display: flex;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 25px;
+    padding: 10px 0px 10px 0px;
+    justify-content: space-between;
+}
+.WeatherCart_time{
+    margin: 10px;
+}
+span{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.first_rows{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.rows_row{
+    padding: 5px 0px;
+    margin: 0px 5px;
+}
+.row_body{
+    font-size: 18px;
+}

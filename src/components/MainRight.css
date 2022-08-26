@@ -2,6 +2,7 @@
     width: 35%;
 }
 
+
 @media (max-width: 800px) {
     .main--right {
         min-height: 500px;
