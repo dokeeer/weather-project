@@ -114,7 +114,7 @@
     }
     .time {
         position: absolute;
-        left: 170px;
+        left: 200px;
         top:-33px;
         width: 250px;
     }
@@ -130,15 +130,7 @@
 
 }
 
-@media (max-width: 700px) {
-    .time {
-        left: 0;
-        top: 50px;
-    }
-    .additional {
-        margin-top: 40px;
-    }
-}
+
 
 @media (max-width: 1200px) {
     .cardsholder {
@@ -150,5 +142,12 @@
 @media (max-width: 800px) {
     .main--left {
         width:100%;
+    }
+    .time {
+        left: 0;
+        top: 50px;
+    }
+    .additional {
+        margin-top: 40px;
     }
 }

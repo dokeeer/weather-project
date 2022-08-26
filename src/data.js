@@ -1,11 +1,13 @@
+import splitIntoDays from "./splitIntoDays";
 
-const url = 'http://api.openweathermap.org/data/2.5/forecast?q=Джанкой&appid=6e93b3d15872f914c6929fed9ea71e9a';
+const url = 'http://api.openweathermap.org/data/2.5/forecast?q=Санкт-Петербург&appid=6e93b3d15872f914c6929fed9ea71e9a';
 
 
 
 const getList = (raw) => {
     const { list } = raw
-    return list
+    const lists = splitIntoDays(list)
+    return lists
 }
 
 export default async function detData(setter) {
