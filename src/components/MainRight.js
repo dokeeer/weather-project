@@ -1,14 +1,11 @@
 import React from 'react';
 import './MainRight.css'
+import WeatherCart from "./WeatherCart";
 
 const MainRight = () => {
     return (
         <div className='main--right'>
-
-            <div className='right--content'>
-
-            </div>
-
+            <WeatherCart/>
         </div>
     );
 };
