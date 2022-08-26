@@ -9,10 +9,12 @@ import Search from "./Search/Search";
 import {getHours} from "../helpFunctions/getHours";
 
 const getCards = (array, click) => {
+    let i=0;
     return array.map(obj =>
         <ForecastCard
             data={obj}
             click={click}
+            key={i++}
             />
     )
 }
