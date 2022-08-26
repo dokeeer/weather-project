@@ -5,10 +5,10 @@ import './ForecastCard.css'
 const ForecastCard = (props) => {
     const {data} = props
     return (
-        <div className='forecast'>
-            <div className='forecast--temp'>{data.degrees} С</div>
+        <div className='forecast' onClick={(event) =>props.click(data)}>
+            <div className='forecast--temp'>{data.averageTemp} С</div>
             <WeatherPicture class='forecast--picture'/>
-            <div className='forecast--day'>{data.day}</div>
+            <div className='forecast--day'>{data.dayOfWeek}</div>
         </div>
     );
 };

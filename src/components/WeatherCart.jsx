@@ -1,33 +1,34 @@
 import React from 'react';
 import './WeatherCart.css'
-import WeatherPicture from "./WeatherPicture";
+import WeatherPicture from './WeatherPicture.js'
+import wind from '../images/wind.svg'
+import rain from '../images/rain.svg'
 
-const WeatherCart = () => {
+const WeatherCart = (props) => {
     return (
         <div className='WeatherCart'>
             <div className='container'>
                 <div className='WeatherCart_content'>
-                    <div className='rows'>
-                        <div className='rows_row'>
-                            <div className='row_body'>
-                                10:40
-                                <span>AM</span>
-                            </div>
+                    <WeatherPicture class = 'weathercart--picture'/>
+                    <div className='adaptive--column'>
+                        <div className='WeatherCart_time left'>
+                            {props.hours}
                         </div>
-                        <div className='rows_row'>
-                            <div className='row_body'>
-                                <WeatherPicture/>
-                            </div>
+                        <div className='wind-speed left'>
+
+                            {props.temp} C
+
                         </div>
-                        <div className='rows_row'>
-                            <div className='row_body'>
-                                25 C
-                            </div>
+                    </div>
+                    <div className='adaptive--column right'>
+                        <div className='WeatherCart_weather'>
+                            <img src={wind} className='weathercart--wind'/>
+                            {props.speed}
+
                         </div>
-                        <div className='rows_row'>
-                            <div className='row_body'>
-                                Chance of rain 2%
-                            </div>
+                        <div className='rain-prob'>
+                            <img src={rain} className='weathercart--rain'/>
+                            {Math.round(props.rain*100)}%
                         </div>
                     </div>
                 </div>

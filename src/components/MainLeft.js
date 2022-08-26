@@ -5,70 +5,74 @@ import wind from '../images/wind.svg'
 import rain from '../images/rain.svg'
 import hum from '../images/hum.svg'
 import ForecastCard from "./ForecastCard";
+import Search from "./Search/Search";
+import {getHours} from "../helpFunctions/getHours";
 
-const getCards = () => {
-    const array = [
-        {
-            degrees: 25,
-            day: 'Tue'
-        },
-        {
-            degrees: 25,
-            day: 'Tue'
-        },
-        {
-            degrees: 25,
-            day: 'Tue'
-        }
-    ]
+const getCards = (array, click) => {
     return array.map(obj =>
         <ForecastCard
-            data={obj}/>
+            data={obj}
+            click={click}
+            />
     )
 }
 
-const MainLeft = (props) => {
-    if (props.data.length !== 0) return (
-        <div className='main--left'>
-            <div className='weather--main'>
-            <WeatherPicture/>
-            </div>
+const getTime = () => {
+    const now = new Date()
+    console.log(`${now.getHours()}:${now.getMinutes()}`)
+    return `${now.getHours()}:${now.getMinutes()}`
+}
 
-            <h1 className='degrees'>{Math.round(props.data[0].hourlyData[0].main.temp - 273)}
-                <span className='symbol'>°</span>
-                <span className='celsium'>С</span>
-            </h1>
-            <div className='adaptive--degrees'>
-                <div className='adaptive--degrees-left'>
-            <h4 className='date'>{props.data[0].dayDate}</h4>
-            <div className='daytime'>
-                <h4 className='day'>{props.data[0].dayOfWeek}</h4>
-                <h3 className='time'>10:40 AM</h3>
-            </div>
-            </div>
-            </div>
-            <div className='additional'>
-                <div className='additional--block'>
-                    <img src={wind} className='additional--img'/>
-                    <span>Wind {props.data[0].hourlyData[0].wind.speed} km/h</span>
+const MainLeft = (props) => {
+    const conditionalRender = (props) => {
+        if (props.data.length !== 0) return (
+                <div>
+                <div className='weather--main'>
+                    <WeatherPicture/>
                 </div>
-                <div className='break'>|</div>
-                <div className='additional--block'>
-                    <img src={hum} className='additional--img'/>
-                    <span>Hum {props.data[0].hourlyData[0].main.humidity}</span>
+
+                <h1 className='degrees'>{Math.round(props.data[0].hourlyData[0].main.temp - 273)}
+                    <span className='symbol'>°</span>
+                    <span className='celsium'>С</span>
+                </h1>
+                <div className='adaptive--degrees'>
+                    <div className='adaptive--degrees-left'>
+                        <h4 className='date'>{props.data[0].dayDate}</h4>
+                        <div className='daytime'>
+                            <h4 className='day'>{props.data[0].dayOfWeek}</h4>
+                            <h3 className='time'>{getTime()}</h3>
+                        </div>
+                    </div>
                 </div>
-                <div className='break'>|</div>
-                <div className='additional--block' >
-                    <img src={rain} className='additional--img'/>
-                    <span>Rain {props.data[0].hourlyData[0]['pop']}%</span>
+                <div className='additional'>
+                    <div className='additional--block'>
+                        <img src={wind} className='additional--img'/>
+                        <span>Wind {props.data[0].hourlyData[0].wind.speed} km/h</span>
+                    </div>
+                    <div className='break'>|</div>
+                    <div className='additional--block'>
+                        <img src={hum} className='additional--img'/>
+                        <span>Hum {props.data[0].hourlyData[0].main.humidity}</span>
+                    </div>
+                    <div className='break'>|</div>
+                    <div className='additional--block' >
+                        <img src={rain} className='additional--img'/>
+                        <span>Rain {props.data[0].hourlyData[0]['pop']*100}%</span>
+                    </div>
                 </div>
-            </div>
-            <div className='cardsholder'>
-            {getCards()}
-            </div>
-        </div>
-    )
-    else return <div></div>
+                <div className='cardsholder'>
+                    {getCards(props.data, props.changeForecast)}
+                </div>
+                </div>)
+    }
+    return (
+    <div className='main--left'>
+        <Search
+            searchValue={props.searchValue}
+            setSearchValue={props.setSearchValue}
+        />
+        {conditionalRender(props)}
+    </div>)
 };
 
 export default MainLeft;
