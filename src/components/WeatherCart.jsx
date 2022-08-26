@@ -12,20 +12,23 @@ const WeatherCart = (props) => {
                     <WeatherPicture class = 'weathercart--picture'/>
                     <div className='adaptive--column'>
                         <div className='WeatherCart_time left'>
-                            10:40 AM
+                            {props.hours}
                         </div>
                         <div className='wind-speed left'>
-                            <img src={wind} className='weathercart--wind'/>
-                            1.64 km/h
+
+                            {props.temp} C
+
                         </div>
                     </div>
                     <div className='adaptive--column right'>
                         <div className='WeatherCart_weather'>
-                            25 C
+                            <img src={wind} className='weathercart--wind'/>
+                            {props.speed}
+
                         </div>
                         <div className='rain-prob'>
                             <img src={rain} className='weathercart--rain'/>
-                            25%
+                            {Math.round(props.rain*100)}%
                         </div>
                     </div>
                 </div>

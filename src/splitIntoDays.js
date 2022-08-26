@@ -1,4 +1,5 @@
 import {getDayDate, getDayOfWeek} from "./helpFunctions/getDayOfWeek";
+import { getHours } from './helpFunctions/getHours'
 
 
 const convertToCelsium = (kelvin) => {
@@ -21,10 +22,13 @@ const splitIntoDays = (list) => {
             averageTemp = convertToCelsium(averageTemp/array.length)
             averageHum = Math.round(averageHum/array.length)
             averageRain = Math.round(averageRain/array.length)
+
             obj = [
                 ...obj,
                 {
-                    hourlyData: [...array],
+                    hourlyData: [
+                        ...array,
+                    ],
                     dayOfWeek: getDayOfWeek(day),
                     dayDate: getDayDate(array[0].dt_txt),
                     averageTemp,
@@ -45,7 +49,10 @@ const splitIntoDays = (list) => {
         averageTemp = averageTemp + list[i].main.temp
         averageRain = averageRain + list[i].pop*100
         day = date.getDay()
-        array.push(list[i])
+        array.push({
+            ...list[i],
+            hours: getHours(list[i].dt_txt)
+        })
     }
     return obj
 }
