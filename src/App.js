@@ -15,9 +15,7 @@ function App() {
 
 
     React.useEffect(() => {
-        setTimeout(
-        getData(setList,searchValue), 500
-        )
+        getData(setList,searchValue)
     }, [searchValue])
   return (
 
