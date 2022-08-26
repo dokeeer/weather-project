@@ -3,6 +3,7 @@ import MainLeft from "./components/MainLeft";
 import MainRight from "./components/MainRight";
 import getData from "./data";
 import React from "react";
+import splitIntoDays from "./splitIntoDays";
 
 function App() {
 
@@ -14,8 +15,10 @@ function App() {
     }, [])
     if (list.length !== 0) {
         const date = new Date((list[0].dt_txt))
-        console.log(date.getDay())
+        console.log(list)
+        console.log(splitIntoDays(list))
     }
+
 
 
   return (
