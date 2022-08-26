@@ -54,12 +54,12 @@ const MainLeft = (props) => {
                     <div className='break'>|</div>
                     <div className='additional--block'>
                         <img src={hum} className='additional--img'/>
-                        <span>Hum {props.data[0].hourlyData[0].main.humidity}</span>
+                        <span>Hum {props.data[0].hourlyData[0].main.humidity} %</span>
                     </div>
                     <div className='break'>|</div>
                     <div className='additional--block' >
                         <img src={rain} className='additional--img'/>
-                        <span>Rain {props.data[0].hourlyData[0]['pop']*100}%</span>
+                        <span>Rain {props.data[0].hourlyData[0]['pop']*100} %</span>
                     </div>
                 </div>
                 <div className='cardsholder'>
