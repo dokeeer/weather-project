@@ -19,7 +19,6 @@ const getCards = (array, click) => {
 
 const getTime = () => {
     const now = new Date()
-    console.log(`${now.getHours()}:${now.getMinutes()}`)
     return `${now.getHours()}:${now.getMinutes()}`
 }
 
@@ -28,13 +27,16 @@ const MainLeft = (props) => {
         if (props.data.length !== 0) return (
                 <div>
                 <div className='weather--main'>
-                    <WeatherPicture/>
+
+                    <h1 className='degrees'>{Math.round(props.data[0].hourlyData[0].main.temp - 273)}
+
+                        <span className='symbol'>°</span>
+                        <span className='celsium'>С</span>
+                    </h1>
+                    <WeatherPicture class='main--picture'/>
                 </div>
 
-                <h1 className='degrees'>{Math.round(props.data[0].hourlyData[0].main.temp - 273)}
-                    <span className='symbol'>°</span>
-                    <span className='celsium'>С</span>
-                </h1>
+
                 <div className='adaptive--degrees'>
                     <div className='adaptive--degrees-left'>
                         <h4 className='date'>{props.data[0].dayDate}</h4>
