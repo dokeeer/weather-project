@@ -7,7 +7,7 @@ const convertToCelsium = (kelvin) => {
 }
 
 const splitIntoDays = (list) => {
-    const startDate = new Date((list[0].dt_txt))
+    const startDate = new Date((list[0].dt_txt.replace(' ', 'T')))
     let day = startDate.getDay();
     let array = []
     let obj = []
@@ -16,13 +16,12 @@ const splitIntoDays = (list) => {
     let averageTemp = 0
     let averageRain = 0
     let averageHum = 0
-    for (let i = 0; i < 40; i++) {
-        date = new Date((list[i].dt_txt))
+    for (let i = 0; i < list.length; i++) {
+        date = new Date((list[i].dt_txt.replace(' ', 'T')))
         if (day !== date.getDay()) {
             averageTemp = convertToCelsium(averageTemp/array.length)
             averageHum = Math.round(averageHum/array.length)
             averageRain = Math.round(averageRain/array.length)
-
             obj = [
                 ...obj,
                 {

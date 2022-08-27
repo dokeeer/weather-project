@@ -20,7 +20,6 @@ const getCards = (data) => {
 
 const MainRight = (props) => {
     const data = props.forecast
-    console.log(data)
     const conditionalRender = (data) => {
         if (data.hourlyData !== undefined) return (
         <div className='cards--holder'>

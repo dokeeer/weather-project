@@ -6,24 +6,32 @@ import rain from '../images/rain.svg'
 import hum from '../images/hum.svg'
 import ForecastCard from "./ForecastCard";
 import Search from "./Search/Search";
-import {getHours} from "../helpFunctions/getHours";
+
+const isUndef = (obj) => {
+    if (typeof obj !== 'undefined') return obj
+    else return ''
+}
+
 
 const getCards = (array, click) => {
+    let i=0;
     return array.map(obj =>
         <ForecastCard
             data={obj}
             click={click}
+            key={i++}
             />
     )
 }
 
 const getTime = () => {
     const now = new Date()
-    return `${now.getHours()}:${now.getMinutes()}`
+    const minutes = now.getMinutes() > 10? now.getMinutes() : `0${now.getMinutes()}`
+    return `${now.getHours()}:${minutes}`
 }
 
 const MainLeft = (props) => {
-    const conditionalRender = (props) => {
+    const conditionalRender = () => {
         if (props.data.length !== 0) return (
                 <div>
                 <div className='weather--main'>
@@ -54,12 +62,12 @@ const MainLeft = (props) => {
                     <div className='break'>|</div>
                     <div className='additional--block'>
                         <img src={hum} className='additional--img'/>
-                        <span>Hum {props.data[0].hourlyData[0].main.humidity}</span>
+                        <span>Hum {props.data[0].hourlyData[0].main.humidity} %</span>
                     </div>
                     <div className='break'>|</div>
                     <div className='additional--block' >
                         <img src={rain} className='additional--img'/>
-                        <span>Rain {props.data[0].hourlyData[0]['pop']*100}%</span>
+                        <span>Rain {props.data[0].hourlyData[0]['pop']*100} %</span>
                     </div>
                 </div>
                 <div className='cardsholder'>
@@ -73,7 +81,7 @@ const MainLeft = (props) => {
             searchValue={props.searchValue}
             setSearchValue={props.setSearchValue}
         />
-        {conditionalRender(props)}
+        {conditionalRender()}
     </div>)
 };
 
