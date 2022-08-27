@@ -18,8 +18,6 @@ const Search = ({searchValue,setSearchValue}) => {
                     onChange={(event) => {
                         event.preventDefault()
                         setInput(event.target.value)
-                        console.log(input)
-                        console.log(searchValue)
                     }}
                 />
                 <input type='submit' hidden/>

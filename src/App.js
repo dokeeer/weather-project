@@ -17,12 +17,22 @@ function App() {
     React.useEffect(() => {
         getData(setList,searchValue)
     }, [searchValue])
+
+    const conditionalRender = () => {
+        return list.length !== 0
+            ?
+            <>
+            <MainLeft data={list} changeForecast={handleForecast} searchValue={searchValue} setSearchValue={setSearchValue}/>
+            <MainRight forecast={currentForecast}/>
+            </>
+            : <></>
+
+    }
   return (
 
     <div className='main'>
 
-        <MainLeft data={list} changeForecast={handleForecast} searchValue={searchValue} setSearchValue={setSearchValue}/>
-        <MainRight forecast={currentForecast}/>
+        {conditionalRender()}
         <div className='right--whiter'>
         </div>
     </div>

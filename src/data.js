@@ -17,10 +17,12 @@ export default async function detData(setter,searchValue) {
         const response = await fetch(url)
         const data = await response.json()
         setter(getList(data))
+
     } catch (error) {
 
         console.error("The Promise is rejected!", error);
 
     } finally {
+
     }
 }

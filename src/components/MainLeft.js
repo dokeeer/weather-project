@@ -6,7 +6,12 @@ import rain from '../images/rain.svg'
 import hum from '../images/hum.svg'
 import ForecastCard from "./ForecastCard";
 import Search from "./Search/Search";
-import {getHours} from "../helpFunctions/getHours";
+
+const isUndef = (obj) => {
+    if (typeof obj !== 'undefined') return obj
+    else return ''
+}
+
 
 const getCards = (array, click) => {
     let i=0;
@@ -21,11 +26,12 @@ const getCards = (array, click) => {
 
 const getTime = () => {
     const now = new Date()
-    return `${now.getHours()}:${now.getMinutes()}`
+    const minutes = now.getMinutes() > 10? now.getMinutes() : `0${now.getMinutes()}`
+    return `${now.getHours()}:${minutes}`
 }
 
 const MainLeft = (props) => {
-    const conditionalRender = (props) => {
+    const conditionalRender = () => {
         if (props.data.length !== 0) return (
                 <div>
                 <div className='weather--main'>
@@ -75,7 +81,7 @@ const MainLeft = (props) => {
             searchValue={props.searchValue}
             setSearchValue={props.setSearchValue}
         />
-        {conditionalRender(props)}
+        {conditionalRender()}
     </div>)
 };
 
