@@ -1,6 +1,6 @@
 import React from 'react';
 import weather from '../images/weatherpic.svg'
-import rainy  from '../images/rainy.svg'
+import sunny  from '../images/weather_svg/a_1_sunny.svg'
 const WeatherPicture = (props) => {
     const {currentWeather} = props
     let curWeather;
@@ -9,13 +9,14 @@ const WeatherPicture = (props) => {
             curWeather = currentWeather
             break
         case 'Rain':
-            curWeather = rainy
             break
+        default:
+            curWeather = sunny
     }
 
 
     return (
-        <iframe src={curWeather} className={props.class}/>
+        <iframe src={sunny} className={props.class}/>
     );
 };
 
