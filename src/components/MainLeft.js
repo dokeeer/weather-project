@@ -39,7 +39,7 @@ const MainLeft = (props) => {
                     <h1 className='degrees'>{Math.round(props.data[0].hourlyData[0].main.temp - 273)}
                         <span className='symbol'>°</span>
                         <span className='celsium'>С</span>
-                    </h1>[
+                    </h1>
                     <WeatherPicture currentWeather={props.data[0].hourlyData[0].weather[0].main}class='main--picture'/>
                 </div>
 
