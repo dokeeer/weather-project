@@ -7,7 +7,7 @@ import sunny from '../images/weather_svg/clear-day.svg'
 import thunderstorm from '../images/weather_svg/thunderstorms.svg'
 const WeatherPicture = (props) => {
     const {currentWeather} = props
-    console.log(currentWeather)
+    console.log(props)
     let curWeather;
     switch (currentWeather) {
         case 'Clouds':
