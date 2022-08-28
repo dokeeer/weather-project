@@ -11,7 +11,9 @@ function App() {
     const [city, setCity] = React.useState('Moscow')
     const [searchValue, setSearchValue] = useState('Moscow')
     const handleForecast = (data) => {
-        setCurrentForecast(data)
+        setCurrentForecast({})
+
+        setTimeout(()=>setCurrentForecast(data),0)
     }
 
 

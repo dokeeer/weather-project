@@ -6,9 +6,15 @@
     box-shadow: 3px -2px 14px -1px rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     display: flex;
-
+    opacity: 0;
+    animation: ani 2.5s forwards;
 
 }
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 .container{
     width: 100%;
 }
@@ -61,7 +67,6 @@
 .right {
     flex-direction: column;
 }
-
 @media (max-width: 1420px) {
     .left {
         flex-direction: column;

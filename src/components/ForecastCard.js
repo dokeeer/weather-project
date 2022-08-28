@@ -4,8 +4,11 @@ import './ForecastCard.css'
 
 const ForecastCard = (props) => {
     const {data} = props
+    function click(){
+        props.click(data)
+    }
     return (
-        <div className='forecast' onClick={(event) =>props.click(data)}>
+        <div className='forecast' onClick={click}>
             <div className='forecast--day'>{data.dayDate.replace(' 2022', '')}</div>
             <div className='forecast--dayOfWeek'>{data.dayOfWeek}</div>
             <WeatherPictureImg

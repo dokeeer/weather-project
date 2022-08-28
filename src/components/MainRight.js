@@ -1,13 +1,13 @@
 import React from 'react';
 import './MainRight.css'
 import WeatherCart from "./WeatherCart";
+import {useId} from "react";
 
 const getCards = (data) => {
     const { hourlyData } = data
     return hourlyData.map(obj=>{
         return (
                 <WeatherCart
-                key={obj.key}
                 hours={obj.hours}
                 speed={obj.wind.speed}
                 temp={Math.round(obj.main.temp-273)}
