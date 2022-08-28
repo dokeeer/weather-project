@@ -10,24 +10,43 @@
     width:100%;
 }
 
+
 .forecast--title {
     text-align: center;
-    margin-top:20px;
     font-family: 'Roboto';
     font-size: 25px;
+    margin: 40px auto 0 auto;
+    opacity: 0;
+    animation: ani 2.5s forwards;
 }
+
+
+.forecast--title span {
+    background: #30BA8F;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
 
 @media (max-width: 800px) {
     .main--right {
         min-height: 500px;
-        background: #1A2B2C;
+        background: none;
         width:100%;
-        margin-top:15px;
+
+    }
+
+    .forecast--title {
+        margin: 30px 0 30px 0;
     }
 }
 
 @media (max-height: 850px) {
     .main--right {
         height:100vh;
+    }
+    .cards--holder {
+        width:100%;
+        margin-bottom: 100px;
     }
 }

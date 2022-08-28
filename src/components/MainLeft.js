@@ -1,11 +1,11 @@
 import React from 'react';
 import './MainLeft.css'
-import WeatherPicture from "./WeatherPicture";
 import wind from '../images/wind.svg'
 import rain from '../images/rain.svg'
 import hum from '../images/hum.svg'
 import ForecastCard from "./ForecastCard";
 import Search from "./Search/Search";
+import WeatherPictureImg from "./WeatherPictureImg";
 
 const isUndef = (obj) => {
     if (typeof obj !== 'undefined') return obj
@@ -36,13 +36,20 @@ const MainLeft = (props) => {
                 <div>
                 <div className='weather--main'>
 
+
                     <h1 className='degrees'>{Math.round(props.data[0].hourlyData[0].main.temp - 273)}
                         <span className='symbol'>°</span>
                         <span className='celsium'>С</span>
                     </h1>
-                    <WeatherPicture currentWeather={props.data[0].hourlyData[0].weather[0].main}class='main--picture'/>
-                </div>
+                    <WeatherPictureImg
+                        currentWeather={props.data[0].hourlyData[0].weather[0].main}
+                        currentTypeWeather = {props.data[0].hourlyData[0].weather[0].description}
+                        time={props.data[0].hourlyData[0].hours}
+                        class='main--picture'
+                    />
 
+                </div>
+                    <h1 className='weather--city'>{props.city}</h1>
 
                 <div className='adaptive--degrees'>
                     <div className='adaptive--degrees-left'>

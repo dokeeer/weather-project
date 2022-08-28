@@ -11,44 +11,76 @@
     margin-right: 4%;
 }
 
+.forecast:hover {
+    cursor: pointer;
+}
+
 .forecast--picture {
     height:70px;
+    width:100px;
 }
 
 .forecast--temp {
     font-family: 'Roboto';
     font-size:25px;
-    margin-top:20px;
+    margin-top:10px;
+
 }
 
 .forecast--day {
     font-family: 'Roboto';
     margin-top: 20px;
-    font-size:30px;
+    font-size:24px;
+    text-align: center;
+}
+
+.forecast--dayOfWeek {
+    margin-top:5px;
+
 }
 
 @media (max-width: 1200px) {
     .forecast {
-        width:94%;
-        height: 80px;
-        margin: 0 0 20px 0;
+        text-align: center;
+        margin-top:20px;
+        width:90%;
+        height: 60px;
         flex-direction: row;
         align-items: center;
         justify-content: center;
     }
-    .forecast--temp {
-        margin: 0;
+
+    .forecast--dayOfWeek {
+        font-size: 24px;
+        margin:0;
+        text-align: right;
+        margin-right: 10px;
     }
-    .forecast--picture {
-        margin: 0;
+
+    .forecast div {
+        width:200px;
+    }
+    .forecast--temp {
+        margin-top:0;
     }
     .forecast--day {
-        margin: 0;
+        margin-top:0;
+
     }
 }
 
 @media (max-width: 800px) {
     .forecast {
-        width: 100%;
+        width: 93%;
+        margin-left: 4%;
+    }
+    .forecast--dayOfWeek {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .forecast--dayOfWeek {
+        display: none;
     }
 }

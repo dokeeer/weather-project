@@ -1,24 +1,71 @@
-root{
-    position: relative;
-    left: -120px;
-
-}
 
 .input{
     margin-top:20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 10px 0 10px 15px;
-    width: 380px;
+
     border-radius: 10px;
     font-size: 16px;
     color: black;
     background: #416b6e;
     color:white;
+    width: 100%;
+}
 
+.input:focus {
+    outline: none;
+}
+
+.search--img {
+    padding: 5px;
+    height: 31px;
+    right:-20px;
+    position: absolute;
+    top:20px;
+    background: #30BA8F;
+    border-radius: 0 10px 10px 0;
+}
+
+.search--img:hover {
+    cursor: pointer;
+}
+.search--holder {
+    width: 50%;
+    position: relative;
 }
 
 @media (max-width: 800px) {
+
+}
+@media (max-width: 500px) {
+    .search--holder {
+        width: 100%;
+        position: relative;
+    }
     .input {
-        width:98%;
+        padding: 5px 0 5px 5px;
+        width: 96%;
+        margin: 0 10px 0 3px;
+        height: 30px;
+    }
+    .thisForm {
+        width:100%;
+    }
+    .myForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width:96%;
+        margin-top:10px;
+    }
+    .search--img {
+        top:0;
+        right:2px;
+        height: 31.5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+
     }
 }

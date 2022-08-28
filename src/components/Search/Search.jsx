@@ -1,5 +1,6 @@
 import React from 'react';
 import './Search.css'
+import search from '../../images/search-black.svg'
 
 const Search = ({searchValue,setSearchValue}) => {
     const [input, setInput] = React.useState('Moscow')
@@ -8,8 +9,9 @@ const Search = ({searchValue,setSearchValue}) => {
         setSearchValue(input.trim())
     }
     return (
-        <div className='root'>
-            <form onSubmit={handleSubmit}>
+
+            <form onSubmit={handleSubmit} className='thisForm'>
+                <div className='search--holder'>
                 <input
                     type='text'
                     className='input'
@@ -19,10 +21,12 @@ const Search = ({searchValue,setSearchValue}) => {
                         event.preventDefault()
                         setInput(event.target.value)
                     }}
-                />
+                >
+                </input><img src={search} className='search--img' onClick={handleSubmit}/>
+                </div>
                 <input type='submit' hidden/>
             </form>
-        </div>
+
     );
 };
 
