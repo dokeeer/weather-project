@@ -1,11 +1,11 @@
 import React from 'react';
 import './MainLeft.css'
-import WeatherPicture from "./WeatherPicture";
 import wind from '../images/wind.svg'
 import rain from '../images/rain.svg'
 import hum from '../images/hum.svg'
 import ForecastCard from "./ForecastCard";
 import Search from "./Search/Search";
+import WeatherPictureImg from "./WeatherPictureImg";
 
 const isUndef = (obj) => {
     if (typeof obj !== 'undefined') return obj
@@ -41,7 +41,7 @@ const MainLeft = (props) => {
                         <span className='symbol'>°</span>
                         <span className='celsium'>С</span>
                     </h1>
-                    <WeatherPicture
+                    <WeatherPictureImg
                         currentWeather={props.data[0].hourlyData[0].weather[0].main}
                         currentTypeWeather = {props.data[0].hourlyData[0].weather[0].description}
                         time={props.data[0].hourlyData[0].hours}

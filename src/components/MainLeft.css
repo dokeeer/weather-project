@@ -90,6 +90,8 @@
 
 .main--picture {
     margin-left: 100px;
+    height:200px;
+
 }
 @media (max-width: 525px) {
     .weather--main {
@@ -144,6 +146,9 @@
     }
     .additional--block {
         margin-top:10px;
+    }
+    .main--picture {
+        height: 140px;
     }
 
 }

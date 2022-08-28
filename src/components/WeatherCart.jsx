@@ -1,8 +1,8 @@
 import React from 'react';
 import './WeatherCart.css'
-import WeatherPicture from './WeatherPicture.js'
 import wind from '../images/wind.svg'
 import rain from '../images/rain.svg'
+import WeatherPictureImg from "./WeatherPictureImg";
 
 const WeatherCart = (props) => {
     return (
@@ -17,7 +17,7 @@ const WeatherCart = (props) => {
                                 <span>{props.temp} C</span>
                             </div>
                     </div>
-                    <WeatherPicture
+                    <WeatherPictureImg
                         currentWeather={props.weather}
                         currentTypeWeather={props.typeweather}
                         time={props.hours}
