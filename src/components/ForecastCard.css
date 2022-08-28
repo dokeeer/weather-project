@@ -11,6 +11,10 @@
     margin-right: 4%;
 }
 
+.forecast:hover {
+    cursor: pointer;
+}
+
 .forecast--picture {
     height:70px;
     width:100px;
@@ -19,7 +23,7 @@
 .forecast--temp {
     font-family: 'Roboto';
     font-size:25px;
-    margin-top:20px;
+    margin-top:10px;
 
 }
 

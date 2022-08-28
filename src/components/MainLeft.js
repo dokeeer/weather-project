@@ -41,7 +41,12 @@ const MainLeft = (props) => {
                         <span className='symbol'>°</span>
                         <span className='celsium'>С</span>
                     </h1>
-                    <WeatherPicture currentWeather={props.data[0].hourlyData[0].weather[0].main}class='main--picture'/>
+                    <WeatherPicture
+                        currentWeather={props.data[0].hourlyData[0].weather[0].main}
+                        currentTypeWeather = {props.data[0].hourlyData[0].weather[0].description}
+                        time={props.data[0].hourlyData[0].hours}
+                        class='main--picture'
+                    />
 
                 </div>
                     <h1 className='weather--city'>{props.city}</h1>

@@ -13,6 +13,7 @@ const getCards = (data) => {
                 temp={Math.round(obj.main.temp-273)}
                 rain={obj['pop']}
                 weather={obj.weather[0].main}
+                typeweather={obj.weather[0].description}
             />
         )
     })
@@ -24,7 +25,7 @@ const MainRight = (props) => {
     const conditionalRender = (data) => {
         if (data.hourlyData !== undefined) return (
         <div className='cards--holder'>
-            <div className='forecast--title'>{data.dayDate}</div>
+            <div className='forecast--title'><span>{data.dayDate}</span></div>
             {getCards(data)}
         </div>
         )

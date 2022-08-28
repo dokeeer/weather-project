@@ -17,7 +17,12 @@ const WeatherCart = (props) => {
                                 <span>{props.temp} C</span>
                             </div>
                     </div>
-                    <WeatherPicture currentWeather={props.weather} class = 'weathercart--picture'/>
+                    <WeatherPicture
+                        currentWeather={props.weather}
+                        currentTypeWeather={props.typeweather}
+                        time={props.hours}
+                        class = 'weathercart--picture'
+                    />
                     <div className='adaptive--column right'>
                         <div className='cont'>
                         <div className='wind-speed'>
