@@ -7,6 +7,7 @@ const Search = ({searchValue,setSearchValue}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         setSearchValue(input.trim())
+
     }
     return (
 

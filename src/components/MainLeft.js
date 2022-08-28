@@ -13,13 +13,15 @@ const isUndef = (obj) => {
 }
 
 
-const getCards = (array, click) => {
+const getCards = (array, click, current) => {
+    console.log(current)
     let i=0;
     return array.map(obj =>
         <ForecastCard
             data={obj}
             click={click}
             key={i++}
+            current={current}
             />
     )
 }
@@ -75,7 +77,13 @@ const MainLeft = (props) => {
                     </div>
                 </div>
                 <div className='cardsholder'>
-                    {getCards(props.data, props.changeForecast)}
+                    {getCards
+                        (
+                            props.data,
+                            props.changeForecast,
+                            props.current
+                        )
+                    }
                 </div>
                 </div>)
     }

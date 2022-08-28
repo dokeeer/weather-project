@@ -11,6 +11,15 @@
     margin-right: 4%;
 }
 
+.forecast:active {
+    background: #30ba8f;
+}
+
+.green {
+    background: #30ba8f;
+    box-shadow: 3px -2px 14px -1px #30ba8f;
+}
+
 .forecast:hover {
     cursor: pointer;
 }
