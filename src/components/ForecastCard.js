@@ -18,7 +18,7 @@ const ForecastCard = (props) => {
                 time={"12:00"}
             />
 
-            <div className='forecast--temp'>{data.averageTemp} С</div>
+            <div className='forecast--temp'>{data.averageTemp}°С</div>
         </div>
     );
 };

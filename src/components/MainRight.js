@@ -8,12 +8,13 @@ const getCards = (data) => {
     return hourlyData.map(obj=>{
         return (
                 <WeatherCart
-                hours={obj.hours}
-                speed={obj.wind.speed}
-                temp={Math.round(obj.main.temp-273)}
-                rain={obj['pop']}
-                weather={obj.weather[0].main}
-                typeweather={obj.weather[0].description}
+                    key={obj.dt}
+                    hours={obj.hours}
+                    speed={obj.wind.speed}
+                    temp={Math.round(obj.main.temp-273)}
+                    rain={obj['pop']}
+                    weather={obj.weather[0].main}
+                    typeweather={obj.weather[0].description}
             />
         )
     })

@@ -14,7 +14,6 @@ const lightRains = ['light rain', 'moderate rain', 'freezing rain', 'light inten
 
 const checkDay = (time) => {
     const myTime = time[0]+time[1]
-    console.log(myTime)
     if (myTime >= 6 && myTime <= 18) return 'day'
     else return 'night'
 }
@@ -74,7 +73,7 @@ const WeatherPictureImg = (props) => {
 
 
     return (
-        <img onClick={()=>console.log('aaa')} src={curWeather} className={props.class}/>
+        <img src={curWeather} className={props.class}/>
     );
 };
 

@@ -14,7 +14,7 @@ const WeatherCart = (props) => {
                                 {props.hours}
                             </div>
                             <div className='weathercart--temp'>
-                                <span>{props.temp} C</span>
+                                <span>{props.temp}°С</span>
                             </div>
                     </div>
                     <WeatherPictureImg
