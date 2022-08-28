@@ -8,7 +8,6 @@
 
 .cards--holder {
     width:100%;
-
 }
 
 .forecast--title {
@@ -41,5 +40,9 @@
 @media (max-height: 850px) {
     .main--right {
         height:100vh;
+    }
+    .cards--holder {
+        width:100%;
+        margin-bottom: 100px;
     }
 }
