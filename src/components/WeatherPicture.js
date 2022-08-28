@@ -2,7 +2,8 @@ import React from 'react';
 import cloudy from '../images/weather_svg/cloudy.svg'
 import rainy from '../images/weather_svg/overcast-rain.svg'
 import snow from '../images/weather_svg/snow.svg'
-import sunny from '../images/weather_svg/clear-day.svg'
+import clearday from '../images/weather_svg/clear-day.svg'
+import clearnight from '../images/weather_svg/clear-night.svg'
 import thunderstorm from '../images/weather_svg/thunderstorms.svg'
 import cloudyDay from '../images/weather_svg/partly-cloudy-day.svg'
 import cloudyNight from '../images/weather_svg/partly-cloudy-night.svg'
@@ -61,12 +62,19 @@ const WeatherPicture = (props) => {
             curWeather = thunderstorm
             break
         default:
-            curWeather = sunny
+            switch (time) {
+                case 'day' :
+                    curWeather = clearday
+                    break
+                default:
+                    curWeather = clearnight
+                    break
+            }
     }
 
 
     return (
-        <iframe onClick={()=>console.log('aaa')} src={curWeather} className={props.class}/>
+        <iframe src={curWeather} className={props.class}/>
     );
 };
 
