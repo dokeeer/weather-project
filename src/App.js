@@ -10,6 +10,7 @@ function App() {
     const [currentForecast, setCurrentForecast] = React.useState({})
     const [city, setCity] = React.useState('Moscow')
     const [searchValue, setSearchValue] = useState('Moscow')
+    const [error, setError] = useState('')
     const handleForecast = (data) => {
         setCurrentForecast({})
 
@@ -18,7 +19,7 @@ function App() {
 
 
     React.useEffect(() => {
-        getData(setList,searchValue, setCity, setCurrentForecast)
+        getData(setList,searchValue, setCity, setCurrentForecast, setError)
     }, [searchValue])
 
     const conditionalRender = () => {
@@ -32,6 +33,7 @@ function App() {
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
                 current={currentForecast}
+                error={error}
             />
             <MainRight forecast={currentForecast}/>
             </>

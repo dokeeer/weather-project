@@ -14,7 +14,7 @@ const isUndef = (obj) => {
 
 
 const getCards = (array, click, current) => {
-    console.log(current)
+
     let i=0;
     return array.map(obj =>
         <ForecastCard
@@ -92,8 +92,11 @@ const MainLeft = (props) => {
         <Search
             searchValue={props.searchValue}
             setSearchValue={props.setSearchValue}
+            error={props.error}
         />
-        {conditionalRender()}
+        {
+            conditionalRender()
+        }
     </div>)
 };
 

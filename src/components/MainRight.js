@@ -1,7 +1,6 @@
 import React from 'react';
 import './MainRight.css'
 import WeatherCart from "./WeatherCart";
-import {useId} from "react";
 
 const getCards = (data) => {
     const { hourlyData } = data

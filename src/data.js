@@ -10,7 +10,7 @@ const getList = (raw) => {
     return lists
 }
 
-export default async function detData(setter,searchValue, setcity, setcurrent) {
+export default async function detData(setter,searchValue, setcity, setcurrent, setError) {
 
     try {
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=6e93b3d15872f914c6929fed9ea71e9a`
@@ -21,7 +21,7 @@ export default async function detData(setter,searchValue, setcity, setcurrent) {
         setcurrent({})
     } catch (error) {
 
-        console.error("The Promise is rejected!", error);
+        setError(searchValue)
 
     } finally {
 

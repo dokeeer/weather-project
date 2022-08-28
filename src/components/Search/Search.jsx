@@ -2,12 +2,12 @@ import React from 'react';
 import './Search.css'
 import search from '../../images/search-black.svg'
 
-const Search = ({searchValue,setSearchValue}) => {
+const Search = ({searchValue,setSearchValue, error}) => {
     const [input, setInput] = React.useState('Moscow')
+    const style = error === input? 'input red' : 'input'
     const handleSubmit = (e) => {
         e.preventDefault()
         setSearchValue(input.trim())
-
     }
     return (
 
@@ -15,12 +15,13 @@ const Search = ({searchValue,setSearchValue}) => {
                 <div className='search--holder'>
                 <input
                     type='text'
-                    className='input'
+                    className={style}
                     placeholder='Поиск города'
                     value={input}
                     onChange={(event) => {
                         event.preventDefault()
                         setInput(event.target.value)
+
                     }}
                 >
                 </input><img src={search} className='search--img' onClick={handleSubmit}/>
