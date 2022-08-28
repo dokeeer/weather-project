@@ -8,8 +8,8 @@ const Search = ({searchValue,setSearchValue}) => {
         setSearchValue(input.trim())
     }
     return (
-        <div className='root'>
-            <form onSubmit={handleSubmit}>
+        <div className='myForm'>
+            <form onSubmit={handleSubmit} className='thisForm'>
                 <input
                     type='text'
                     className='input'

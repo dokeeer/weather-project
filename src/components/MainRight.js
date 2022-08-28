@@ -12,6 +12,7 @@ const getCards = (data) => {
                 speed={obj.wind.speed}
                 temp={Math.round(obj.main.temp-273)}
                 rain={obj['pop']}
+                weather={obj.weather[0].main}
             />
         )
     })

@@ -13,6 +13,7 @@
 
 .forecast--picture {
     height:70px;
+    width:100px;
 }
 
 .forecast--temp {
@@ -29,26 +30,24 @@
 
 @media (max-width: 1200px) {
     .forecast {
-        width:94%;
-        height: 80px;
-        margin: 0 0 20px 0;
+
+        margin-top:20px;
+        width:90%;
+        height: 60px;
         flex-direction: row;
         align-items: center;
         justify-content: center;
     }
     .forecast--temp {
-        margin: 0;
-    }
-    .forecast--picture {
-        margin: 0;
+        margin-top:0;
     }
     .forecast--day {
-        margin: 0;
+        margin-top:0;
     }
 }
 
 @media (max-width: 800px) {
     .forecast {
-        width: 100%;
+        width: 90%;
     }
 }

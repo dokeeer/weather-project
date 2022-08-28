@@ -19,6 +19,10 @@
 @media screen and (max-width: 1200px) {
     .main {
         padding:0 2%;
+
+        height: 100%;
+        width:100%;
+        padding: 0;
     }
 }
 
@@ -26,6 +30,11 @@
     .main {
         flex-direction: column;
         height: 100%;
+        width:100%;
+        padding: 0;
+    }
+    .root {
+        width:80%
     }
     .right--whiter {
         display: none;

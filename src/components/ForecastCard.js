@@ -7,7 +7,7 @@ const ForecastCard = (props) => {
     return (
         <div className='forecast' onClick={(event) =>props.click(data)}>
             <div className='forecast--temp'>{data.averageTemp} С</div>
-            <WeatherPicture class='forecast--picture'/>
+            <WeatherPicture class='forecast--picture' currentWeather={data.averageWeather}/>
             <div className='forecast--day'>{data.dayOfWeek}</div>
         </div>
     );

@@ -60,6 +60,9 @@
     position: relative;
 }
 
+.weather--city {
+    font-size: 40px;
+}
 .additional--img {
     position: absolute;
 
@@ -88,7 +91,17 @@
 .main--picture {
     margin-left: 100px;
 }
+@media (max-width: 525px) {
+    .weather--main {
 
+
+    }
+    .main--picture {
+
+        width:150px;
+
+    }
+}
 @media (max-width: 1025px) {
     .adaptive--degrees {
         display: flex;
@@ -141,12 +154,15 @@
     .cardsholder {
         flex-direction: column;
         margin-top:20px;
+        align-items: center;
     }
+
 }
 
 @media (max-width: 800px) {
     .main--left {
-        width:100%;
+        width:96%;
+        padding-left:2%;
     }
     .time {
         left: 0;
@@ -154,5 +170,19 @@
     }
     .additional {
         margin-top: 40px;
+    }
+    .cardsholder {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .weather--main {
+        flex-direction: column-reverse;
+    }
+    .main--picture {
+        margin-left:0
     }
 }

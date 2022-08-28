@@ -1,5 +1,6 @@
 import {getDayDate, getDayOfWeek} from "./helpFunctions/getDayOfWeek";
 import { getHours } from './helpFunctions/getHours'
+import {getMaxEntry} from "./helpFunctions/getMaxEntry";
 
 
 const convertToCelsium = (kelvin) => {
@@ -13,6 +14,7 @@ const splitIntoDays = (list) => {
     let obj = []
     let date
     let counter = 1
+    let averageWeather = []
     let averageTemp = 0
     let averageRain = 0
     let averageHum = 0
@@ -22,6 +24,7 @@ const splitIntoDays = (list) => {
             averageTemp = convertToCelsium(averageTemp/array.length)
             averageHum = Math.round(averageHum/array.length)
             averageRain = Math.round(averageRain/array.length)
+            averageWeather = getMaxEntry(averageWeather)
             obj = [
                 ...obj,
                 {
@@ -32,18 +35,21 @@ const splitIntoDays = (list) => {
                     dayDate: getDayDate(array[0].dt_txt),
                     averageTemp,
                     averageHum,
-                    averageRain
+                    averageRain,
+                    averageWeather
                 }
             ]
             averageRain = 0
             averageHum = 0
             averageTemp = 0
+            averageWeather = []
             counter++
             array = []
         }
         else {
 
         }
+        averageWeather.push(list[i].weather[0].main)
         averageHum = averageHum + list[i].main.humidity
         averageTemp = averageTemp + list[i].main.temp
         averageRain = averageRain + list[i].pop*100

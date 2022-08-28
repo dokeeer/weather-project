@@ -1,8 +1,3 @@
-root{
-    position: relative;
-    left: -120px;
-
-}
 
 .input{
     margin-top:20px;
@@ -19,6 +14,26 @@ root{
 
 @media (max-width: 800px) {
     .input {
-        width:98%;
+        width:50%;
+    }
+}
+@media (max-width: 500px) {
+    .input {
+        padding: 5px 0 5px 5px;
+        width: 96%;
+        margin: 0 10px 0 3px;
+        height: 30px;
+
+    }
+    .thisForm {
+        width:100%;
+    }
+    .myForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width:96%;
+        margin-top:10px;
     }
 }
