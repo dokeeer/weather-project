@@ -7,7 +7,6 @@ import sunny from '../images/weather_svg/clear-day.svg'
 import thunderstorm from '../images/weather_svg/thunderstorms.svg'
 const WeatherPicture = (props) => {
     const {currentWeather} = props
-    console.log(props)
     let curWeather;
     switch (currentWeather) {
         case 'Clouds':
@@ -28,7 +27,7 @@ const WeatherPicture = (props) => {
 
 
     return (
-        <iframe src={curWeather} className={props.class}/>
+        <iframe onClick={()=>console.log('aaa')} src={curWeather} className={props.class}/>
     );
 };
 

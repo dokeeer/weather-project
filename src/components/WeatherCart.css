@@ -132,7 +132,7 @@
     }
     .cont {
         justify-content: center;
-        align-items: center;
+
         padding-left: 20px;
     }
     .weathercart--temp {
@@ -158,5 +158,23 @@
     }
     .cont {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .adaptive--column {
+        width: 100px;
+    }
+    .right {
+        padding-right: 0;
+    }
+    .left {
+        margin-left:0;
+    }
+}
+
+@media (max-width: 350px) {
+    .adaptive--column {
+        font-size: 15px;
     }
 }

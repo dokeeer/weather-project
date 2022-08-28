@@ -32,7 +32,7 @@ const splitIntoDays = (list) => {
                         ...array,
                     ],
                     dayOfWeek: getDayOfWeek(day),
-                    dayDate: getDayDate(array[0].dt_txt),
+                    dayDate: getDayDate(array[0].dt_txt.replace(' ', 'T')),
                     averageTemp,
                     averageHum,
                     averageRain,

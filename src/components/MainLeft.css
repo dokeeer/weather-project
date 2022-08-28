@@ -183,6 +183,9 @@
         flex-direction: column-reverse;
     }
     .main--picture {
-        margin-left:0
+        margin-left:0;
+    }
+    .degrees {
+        margin-top:0;
     }
 }

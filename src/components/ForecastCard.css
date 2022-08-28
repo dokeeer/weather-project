@@ -20,17 +20,24 @@
     font-family: 'Roboto';
     font-size:25px;
     margin-top:20px;
+
 }
 
 .forecast--day {
     font-family: 'Roboto';
     margin-top: 20px;
-    font-size:30px;
+    font-size:24px;
+    text-align: center;
+}
+
+.forecast--dayOfWeek {
+    margin-top:5px;
+
 }
 
 @media (max-width: 1200px) {
     .forecast {
-
+        text-align: center;
         margin-top:20px;
         width:90%;
         height: 60px;
@@ -38,16 +45,38 @@
         align-items: center;
         justify-content: center;
     }
+
+    .forecast--dayOfWeek {
+        font-size: 24px;
+        margin:0;
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .forecast div {
+        width:200px;
+    }
     .forecast--temp {
         margin-top:0;
     }
     .forecast--day {
         margin-top:0;
+
     }
 }
 
 @media (max-width: 800px) {
     .forecast {
-        width: 90%;
+        width: 93%;
+        margin-left: 4%;
+    }
+    .forecast--dayOfWeek {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .forecast--dayOfWeek {
+        display: none;
     }
 }
