@@ -21,7 +21,6 @@ const Search = ({searchValue,setSearchValue, error}) => {
                     onChange={(event) => {
                         event.preventDefault()
                         setInput(event.target.value)
-
                     }}
                 >
                 </input><img src={search} className='search--img' onClick={handleSubmit}/>
