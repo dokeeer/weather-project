@@ -18,14 +18,21 @@ function App() {
 
 
     React.useEffect(() => {
-        getData(setList,searchValue, setCity)
+        getData(setList,searchValue, setCity, setCurrentForecast)
     }, [searchValue])
 
     const conditionalRender = () => {
         return list.length !== 0
             ?
             <>
-            <MainLeft city={city} data={list} changeForecast={handleForecast} searchValue={searchValue} setSearchValue={setSearchValue}/>
+            <MainLeft
+                city={city}
+                data={list}
+                changeForecast={handleForecast}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+                current={currentForecast}
+            />
             <MainRight forecast={currentForecast}/>
             </>
             : <></>

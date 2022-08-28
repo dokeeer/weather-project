@@ -2,7 +2,6 @@ import {getDayDate, getDayOfWeek} from "./helpFunctions/getDayOfWeek";
 import { getHours } from './helpFunctions/getHours'
 import {getMaxEntry} from "./helpFunctions/getMaxEntry";
 
-
 const convertToCelsium = (kelvin) => {
     return Math.round(kelvin - 273)
 }
@@ -39,7 +38,7 @@ const splitIntoDays = (list) => {
                     averageHum,
                     averageRain,
                     averageWeather,
-                    averageTypeWeather
+                    averageTypeWeather,
                 }
             ]
             averageRain = 0

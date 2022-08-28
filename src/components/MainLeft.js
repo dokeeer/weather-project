@@ -13,20 +13,22 @@ const isUndef = (obj) => {
 }
 
 
-const getCards = (array, click) => {
+const getCards = (array, click, current) => {
+    console.log(current)
     let i=0;
     return array.map(obj =>
         <ForecastCard
             data={obj}
             click={click}
             key={i++}
+            current={current}
             />
     )
 }
 
 const getTime = () => {
     const now = new Date()
-    const minutes = now.getMinutes() > 10? now.getMinutes() : `0${now.getMinutes()}`
+    const minutes = now.getMinutes() >= 10? now.getMinutes() : `0${now.getMinutes()}`
     return `${now.getHours()}:${minutes}`
 }
 
@@ -35,8 +37,6 @@ const MainLeft = (props) => {
         if (props.data.length !== 0) return (
                 <div>
                 <div className='weather--main'>
-
-
                     <h1 className='degrees'>{Math.round(props.data[0].hourlyData[0].main.temp - 273)}
                         <span className='symbol'>°</span>
                         <span className='celsium'>С</span>
@@ -77,7 +77,13 @@ const MainLeft = (props) => {
                     </div>
                 </div>
                 <div className='cardsholder'>
-                    {getCards(props.data, props.changeForecast)}
+                    {getCards
+                        (
+                            props.data,
+                            props.changeForecast,
+                            props.current
+                        )
+                    }
                 </div>
                 </div>)
     }
