@@ -1,6 +1,8 @@
 # Weather App (React)
 Weather app (full adaptive)
 * **[Github Pages](https://dokeeer.github.io/weather-project/)** 
+![preview](https://user-images.githubusercontent.com/88163502/187157362-c82eb770-8fe2-49af-9e9c-2dc43aed9639.png)
+
 
 
 ### Prerequisites
