@@ -14,15 +14,12 @@ Node.js
 
 ## Deployment
 
-
-```
-npm start
-```
 ```
 npm install
 ```
-
-
+```
+npm start
+```
 
 ## Authors
 
