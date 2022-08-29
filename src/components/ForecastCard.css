@@ -52,7 +52,7 @@
     .forecast {
         text-align: center;
         margin-top:20px;
-        width:90%;
+        width:85%;
         height: 60px;
         flex-direction: row;
         align-items: center;

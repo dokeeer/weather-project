@@ -7,7 +7,7 @@ const convertToCelsium = (kelvin) => {
 }
 
 const splitIntoDays = (list) => {
-    const startDate = new Date((list[0].dt_txt.replace(' ', 'T')))
+    const startDate =  new Date((list[0].dt_txt.replace(' ', 'T')))
     let day = startDate.getDay();
     let array = []
     let obj = []
