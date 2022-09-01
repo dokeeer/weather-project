@@ -7,21 +7,26 @@
 .symbol {
     font-size: 120px;
     position: absolute;
-    top: -30px;
+    top: -15px;
+}
+
+.celsium-holder {
+    position: relative;
 }
 
 .celsium {
     font-size: 100px;
     position: absolute;
-    left:220px;
+    left: 40px;
+    top: 8px;
 }
 
 .degrees {
-    position: relative;
     font-weight: 100;
     font-size: 164px;
     letter-spacing: 0;
     margin:20px 0;
+    display: flex;
 }
 
 .date {
@@ -127,7 +132,7 @@
     }
     .celsium {
         font-size: 70px;
-        left: 135px;
+        left: 30px;
     }
     .daytime {
         position: relative;
